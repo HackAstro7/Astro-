@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>𝗛𝗔𝗖𝗞𝗘𝗥 𝗝𝗢𝗡𝗕𝗘𝗧 💎 𝗕𝗟𝗔𝗭𝗘 𝟮.𝟬 </title>
+  <title> 𝗛𝗔𝗖𝗞𝗘𝗥'𝗦 𝗕𝗔𝗖 𝗕𝗢 𝗝𝗢𝗡𝗕𝗘𝗧 🎲 𝗕𝗟𝗔𝗭𝗘 𝟮.𝟬 </title>
 
 </head>
 
@@ -379,17 +379,17 @@
             transform: scale(1.05);
         }
 .social-icons a.instagram {
-    color: #C13584; 
+    color: #ff0fc0; 
 
 }
 
 .social-icons a.instagram:hover {
-    color: #e1306c; 
+    color: #ff0fc0; 
     text-shadow: 0 0 15px rgba(225, 48, 108, 0.8);
 }
 
 .social-icons a.telegram {
-    color: #0088cc; 
+    color: #24fff9; 
 
 }
 
@@ -673,7 +673,7 @@
 h2.mt-3 {
     color: white; 
     font-family: 'Roboto', sans-serif; 
-    font-size: 2.5rem; 
+    font-size: 1.5rem; 
     font-weight: bold; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     letter-spacing: 1px; 
@@ -688,22 +688,193 @@ a.anchorjs-link {
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+          <source src="https://static.vecteezy.com/system/resources/previews/045/714/305/mp4/cyberspace-digital-hi-tech-text-animation-with-3d-color-background-free-video.mp4" type="video/mp4">
           
         </video>
       </div>
-      
+      <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Dinâmico</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #141E30, #243B55);
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      position: fixed; /* Faz o contêiner flutuar */
+      top: 1px;
+      left: 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 1000; /* Garante que o contêiner fique acima de outros elementos */
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 1rem; /* Tamanho do texto de "ALUNOS ONLINE" */
+      font-weight: bold;
+    }
+    .status .circle {
+      width: 10px;
+      height: 10px;
+      background-color: #00FF00; /* Verde para status online */
+      border-radius: 50%;
+    }
+    .status span {
+      font-size: 0.8rem; /* Tamanho reduzido para "ALUNOS ONLINE" */
+    }
+    .logo {
+      font-size: 2rem; /* Tamanho reduzido */
+      font-weight: bold;
+      text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="status">
+      <div class="circle"></div>
+      <span>ALUNOS ONLINE</span>
+    </div>
+    <div class="logo" id="dynamic-number">1702</div>
+  </div>
+
+  <script>
+    const logoElement = document.getElementById('dynamic-number');
+    let currentNumber = 1702;
+
+    function updateNumber() {
+      // Altere o número de forma aleatória (aumenta ou diminui)
+      const randomChange = Math.floor(Math.random() * 21) - 10; // De -10 a +10
+      currentNumber += randomChange;
+
+      // Atualiza o elemento HTML
+      logoElement.textContent = currentNumber;
+
+      // Muda o número novamente após um tempo aleatório (100ms a 1000ms)
+      const randomInterval = Math.random() * 900 + 100;
+      setTimeout(updateNumber, randomInterval);
+    }
+
+    // Inicia a atualização
+    updateNumber();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .float {
+            left: 5px; /* Mantém o botão à esquerda */
+            position: fixed;
+            width: 60px;
+            height: 50px;
+            bottom: 20px; /* Move o botão para a parte inferior */
+            text-align: center;
+            z-index: 100;
+            animation: shake 0.5s infinite; /* Animação de tremor */
+        }
+        @keyframes shake {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, 2px); }
+            50% { transform: translate(2px, -2px); }
+            75% { transform: translate(-2px, -2px); }
+            100% { transform: translate(2px, 2px); }
+        }
+        #msg1 {
+            position: fixed;
+            background: #000;
+            color: #0f0;
+            left: 75px; /* Alinha a notificação ao lado direito do botão */
+            bottom: 20px; /* Coloca a notificação logo acima do botão */
+            padding: 5px 15px;
+            border-radius: 8px;
+            font: 125% Arial, sans-serif;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            animation: blink 1s infinite; /* Animação de piscar */
+        }
+
+        /* Animação para a notificação piscar */
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        #msg1:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            transform: translateY(-50%);
+            border: 15px solid transparent;
+            border-right-color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://pixgg.com/Yasmim_barbosa" class="float" target="_blank">
+        <img src="https://i.ibb.co/S57wx0Q/IMG-20241223-202521.jpg" alt="Doar" width="42px">
+    </a>
+    <div id="msg1">𝑫𝑶𝑨𝑹 𝑨𝑮𝑶𝑹𝑨.!!!</div>
+    <script>
+        setTimeout(() => document.getElementById("msg1").style.visibility = "visible", 500);
+        setTimeout(() => document.getElementById("msg1").style.visibility = "hidden", 10000);
+        setTimeout(() => document.getElementById("msg1").style.visibility = "visible", 30000);
+        document.getElementById("msg1").onclick = () => document.getElementById("msg1").style.visibility = "hidden";
+    </script>
+</body>
+</html>
+
 
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
-                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">𝟎𝟏𝟏𝟕 𝐎𝐍𝐋𝐈𝐍𝐄</span> 
-                    <span style="color: #ff0000; font-weight: bold;">🎭𝐇𝐀𝐂𝐊𝐄𝐑 @𝐁𝐔𝐀𝐒𝐓𝐑𝐎𝟕</span>
-                </p>
+                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #0ff; text-shadow: 1122px 1777px 277px rgba(0, 0, 0, 0.3);">
+                    
+                         </p>
+            
+                <script>
+                    let currentNumber = 2000;  // Número inicial de alunos
+                    let studentElement = document.getElementById('studentNumber');
+            
+                    // Função que simula a mudança do número de alunos
+                    function updateStudentCount() {
+                        // Aleatoriamente escolhe se o número deve aumentar ou diminuir
+                        let randomChange = Math.random() > 0.5 ? 50 : -50;
+                        let targetNumber = currentNumber + randomChange;
+            
+                        // A cada intervalo, atualiza o número em pequenos passos
+                        let step = (targetNumber - currentNumber) / 10;  // Passos para atualizar o número gradualmente
+                        let counter = setInterval(function() {
+                            currentNumber += step;
+            
+                            // Se o número se aproximar do número alvo, para o contador
+                            if (Math.abs(targetNumber - currentNumber) <= Math.abs(step)) {
+                                clearInterval(counter);
+                                currentNumber = targetNumber;
+                            }
+            
+                            // Atualiza o número na tela
+                            studentElement.textContent = Math.round(currentNumber) + " ";
+                        }, 100);  // Atualiza a cada 100ms
+                    }
+            
+                    // Atualiza o número a cada 2 segundos
+                    setInterval(updateStudentCount, 2000);
+                </script>
                 
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+                <img class="login-intro-img" src="https://www.loonapix.com/img/tmp/1735913184336572931.png" alt="Perfil">
             </div>
             
             <div class="register-form mt-4">
@@ -724,7 +895,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.bet.br/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                            
                          </button>
@@ -734,7 +905,7 @@ a.anchorjs-link {
                   <div class="social-icons mt-3">
                     <a href="https://www.instagram.com/buastro7.midiah/?hl=pt-br" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/astro14x" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
-                    <a href="https://t.me/Guguastro7" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                    <a></i></a>
                 </div>
                 
                
@@ -751,13 +922,13 @@ a.anchorjs-link {
                     
                         <div class="elementor-element elementor-element-9637017 elementor-widget elementor-widget-heading" data-id="9637017" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default"> <span style="color:#00ff40"><svg style="width:1.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                    <h2 class="elementor-heading-title elementor-size-default"> <span style="color:#1bff47"><svg style="width:1.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
           <path d="M7.702 1.368a.75.75 0 0 1 .597 0c2.098.91 4.105 1.99 6.004 3.223a.75.75 0 0 1-.194 1.348A34.27 34.27 0 0 0 8.341 8.25a.75.75 0 0 1-.682 0c-.625-.32-1.262-.62-1.909-.901v-.542a36.878 36.878 0 0 1 2.568-1.33.75.75 0 0 0-.636-1.357 38.39 38.39 0 0 0-3.06 1.605.75.75 0 0 0-.372.648v.365c-.773-.294-1.56-.56-2.359-.8a.75.75 0 0 1-.194-1.347 40.901 40.901 0 0 1 6.005-3.223ZM4.25 8.348c-.53-.212-1.067-.411-1.611-.596a40.973 40.973 0 0 0-.418 2.97.75.75 0 0 0 .474.776c.175.068.35.138.524.21a5.544 5.544 0 0 1-.58.681.75.75 0 1 0 1.06 1.06c.35-.349.655-.726.915-1.124a29.282 29.282 0 0 0-1.395-.617A5.483 5.483 0 0 0 4.25 8.5v-.152Z" />
           <path d="M7.603 13.96c-.96-.6-1.958-1.147-2.989-1.635a6.981 6.981 0 0 0 1.12-3.341c.419.192.834.393 1.244.602a2.25 2.25 0 0 0 2.045 0 32.787 32.787 0 0 1 4.338-1.834c.175.978.315 1.969.419 2.97a.75.75 0 0 1-.474.776 29.385 29.385 0 0 0-4.909 2.461.75.75 0 0 1-.794 0Z" />
         </svg>
-        HACKER DO BOUBLE COM BRANCO NA HORA EXATA/</span> <span style="color:#ff4d4d">+ HACKER DO MINES</span>
+        𝙃𝘼𝘾𝙆𝙀𝙍'𝙎 𝘽𝘼𝘾 𝘽𝙊 𝙀𝙓𝘾𝙇𝙐𝙎𝙄𝙑𝙀 𝙏𝙄𝙀 𝙀𝙈𝙋𝘼𝙏𝙀 𝙉𝘼 𝙃𝙊𝙍𝘼 𝙀𝙓𝘼𝙏𝘼 /</span> <span style="color:#ff4d4d">+ HACKER DO MINES</span>
         
-        </h2>		</div>
+        </h2>		
                         </div>
                         <div class="elementor-element elementor-element-33f902a elementor-widget elementor-widget-html" data-id="33f902a" data-element_type="widget" data-widget_type="html.default">
                         <div class="elementor-widget-container">
@@ -778,24 +949,24 @@ a.anchorjs-link {
                     <div class="promo-banner mt-3">
                         <img src="https://i.ibb.co/8K8JzJb/fotor-20241015202813.png" alt="Promoção Especial">
                         <h2>Somente 300 Vagas!</h2>
-                        <p>De <span class="preco-antigo">R$ 127,99</span> por <span class="preco-novo">R$ 37,99</span></p>
+                        <p>De <span class="preco-antigo">R$ 157,99</span> por <span class="preco-novo">R$ 56,99</span></p>
                         <p><strong>Garanta já a sua vaga com esse super desconto!</strong></p>
                         <p>Restam apenas 127 vagas disponíveis, não perca!</p>
-                        <a href="https://mpago.la/2uTYzq8" class="promo-btn">Aproveitar Agora</a>
+                        <a href="https://mpago.la/2f13qgu" class="promo-btn">Aproveitar Agora</a>
                     </div>
                     
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-<img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
+<img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Hacker"></div>
 
 <div class="context-options" id="contextOptions">
-<img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
-<span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Próspera </span>
+<img id="myImage" src="https://i.ibb.co/MZFTKPs/IMG-20241227-175337.jpg" alt="Imagem Atual">
+<span class="bot-title"><i class="fas fa-user-secret"></i> HACKER BAC BO </span>
 <div id="result"></div>
-<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
-<span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+<span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> OFFLINE ❌</span>
+<span class="context-option closeContextOptions" onclick="closeContextOptions();"> HACKEAR BAC BO<i class="fa fa-play" aria-hidden="true"></i> </span>
 <div id="loading-animation" class="loading-hidden">
 <div class="spinner"></div>
 
@@ -858,7 +1029,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'zero94') {
+    if (password === 'voa25') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -909,9 +1080,11 @@ function closeContextOptions() {
 
             // Lista de URLs de imagens
             const imageUrls = [
-                'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                'https://i.ibb.co/xCLkddW/IMG-20241221-203802.jpg',
-                'https://i.ibb.co/QpSM5ts/IMG-20241221-195941-159.png'];
+                'https://i.ibb.co/qMwt10d/IMG-20241227-105953.jpg',
+                'https://i.ibb.co/xMtJH3G/IMG-20241227-111020.jpg',
+                'https://i.ibb.co/HrF06QJ/IMG-20241227-110028.jpg',
+            
+            ];
 
             // Escolhe e exibe uma imagem aleatória
             const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
@@ -946,8 +1119,8 @@ function toggleContextOptions() {
                 menu.style.display = 'none';
             }
         }
-        var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
-        var image2Url = 'https://i.ibb.co/QpSM5ts/IMG-20241221-195941-159.png';
+        var image1Url = 'https://i.ibb.co/qMwt10d/IMG-20241227-105953.jpg';
+        var image2Url = 'https://i.ibb.co/HrF06QJ/IMG-20241227-110028.jpg';
        
        
        
